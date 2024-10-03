@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'bold';
+            src:url(../fonts/Montserrat-Bold.ttf);
+        }
+        
+        @font-face {
+            font-family: 'semibold';
+            src:url(../fonts/Montserrat-SemiBold.ttf);
+        }
+
+        @font-face {
+            font-family: 'medium';
+            src:url(../fonts/Montserrat-Medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'regular';
+            src:url(../fonts/Montserrat-Regular.ttf);
+        }
+        
+        body{
+            font-family: regular;
+            font-weight: 400;
+            background-color: #1C2555;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #header{
+            width: 1440px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            height: 120px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #header nav{
+            display: flex;
+            gap: 40px;
+        }
+
+        #header nav ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        #header nav .sosical-button{
+            gap: 12px;
+        }
+        
+        #header nav .sign-in-up{
+            gap: 12px;
+        }
+
+        .icon-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 100px;
+            transition: background-color 0.1s;
+        }
+
+        .icon-button:hover{
+            background-color: hsla(0, 0%, 100%, 0.1);
+        }
+
+        .text-button{
+            display: flex;
+            text-decoration: none;
+            color: #fff;
+            padding: 0 16px;
+            height: 40px;
+            border-radius: 6px;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.1s;
+        }
+
+        .text-button:hover{
+            background-color: hsla(0, 0%, 100%, 0.1);
+        }
+
+        .divider{
+            width: 1px;
+            height: 12px;
+            background-color: hsla(0, 0%, 100%, 0.3);
+        }
+
+        #hero-section {
+           height: 100vh;
+        }
+
+        #hero-section #video{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #hero-section__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #fff;
+            margin-top: 8%;
+        }
+
+        #hero-section__content h1{
+            font-family: semibold;
+            font-weight: 700;
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+
+        #hero-section__content p{
+            max-width: 770px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 40px;
+            font-family: regular;
+            font-weight: 400;
+        }
+
+        #next-section{
+            height: 400px;
+        }
+
+        .title{
+            text-align: center;
+            color: #fff;
+            font-family: semibold;
+            font-weight: 700;
+            margin-bottom: 40px;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+
+        .title span{
+            padding-bottom: 4px;
+            border-bottom: 8px solid #024EE9;
+        }
+    </style>
+</head>
+<body>
+    <section id="hero-section">
+        <video autoplay muted loop id="video">
+            <source src="videos/hero-background_1.mp4" type="video/mp4">
+        </video>
+        <header id="header">
+            <img class="logo" src="./images/logo.png">
+            <nav>
+                <ul class="sosical-button">
+                    <li>
+                        <a href="#" class="icon-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.0391 13.25H14.1094V22H10.2031V13.25H7V9.65625H10.2031V6.88281C10.2031 3.75781 12.0781 2 14.9297 2C16.2969 2 17.7422 2.27344 17.7422 2.27344V5.35938H16.1406C14.5781 5.35938 14.1094 6.29688 14.1094 7.3125V9.65625H17.5859L17.0391 13.25Z" fill="white"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.8984 7.38281C22.3672 9.02344 22.3672 12.5391 22.3672 12.5391C22.3672 12.5391 22.3672 16.0156 21.8984 17.6953C21.6641 18.6328 20.9219 19.3359 20.0234 19.5703C18.3438 20 11.7031 20 11.7031 20C11.7031 20 5.02344 20 3.34375 19.5703C2.44531 19.3359 1.70312 18.6328 1.46875 17.6953C1 16.0156 1 12.5391 1 12.5391C1 12.5391 1 9.02344 1.46875 7.38281C1.70312 6.44531 2.44531 5.70312 3.34375 5.46875C5.02344 5 11.7031 5 11.7031 5C11.7031 5 18.3438 5 20.0234 5.46875C20.9219 5.70312 21.6641 6.44531 21.8984 7.38281ZM9.51562 15.7031L15.0625 12.5391L9.51562 9.375V15.7031Z" fill="white"/>
+                                </svg>
+                                
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.44 5.82C15.7566 5.03953 15.3799 4.0374 15.38 3H12.29V15.4C12.2667 16.0712 11.9835 16.7071 11.5003 17.1735C11.0171 17.6399 10.3716 17.9004 9.7 17.9C8.28 17.9 7.1 16.74 7.1 15.3C7.1 13.58 8.76 12.29 10.47 12.82V9.66C7.02 9.2 4 11.88 4 15.3C4 18.63 6.76 21 9.69 21C12.83 21 15.38 18.45 15.38 15.3V9.01C16.633 9.90985 18.1374 10.3926 19.68 10.39V7.3C19.68 7.3 17.8 7.39 16.44 5.82Z" fill="white"/>
+                                </svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="sign-in-up">
+                    <li>
+                        <a href="#" class="text-button">Đăng nhập</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" class="text-button">Đăng ký</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="hero-section__content">
+            <h1>ĐẦU TƯ BỀN VỮNG ACADEMY</h1>
+            <p>Học viện Đầu Tư Bền Vững Academy được thành lập nên với sứ mệnh là nơi cung cấp kiến thức, các chương trình đào tạo chất lượng, sản phẩm tư vấn hỗ trợ đầu tư với triết lý "bền vững" trên thị trường Việt Nam.</p>
+        </div>
+    </section>
+
+    <section id="next-section">
+        <h1 class="title"><span>Bạn sẽ học được những gì?</span></h1>
+    </section>
+    
+
+    
+</body>
+</html>
